@@ -3,7 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link type="text/css" rel="stylesheet" href="./ABC School – Superlist_files/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+
 <style type="text/css">
+
+
 .gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
 </style>
 <style type="text/css">
@@ -118,6 +127,8 @@ var userSettings = {"url":"\/","uid":"0","time":"1493574860","secure":""};
 					margin-bottom: 20px;
 			}
 			#basic_details div div{
+				-ms-transition: 0.25s;
+				-webkit-transition: 0.25s;
 					transition: 0.25s;
 			}
 			@media screen and (min-width: 768px){
@@ -131,8 +142,95 @@ var userSettings = {"url":"\/","uid":"0","time":"1493574860","secure":""};
 			
 			
 			}
+
+
+			.carousel {
+     width:100% !important; 
+     overflow: hidden !important; 
+     right:0 !important; 
+}
+			.slide1{
+			  background-image: url('bkgrnd1.png');
+			  height: 500px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: cover;
+			}
+			.slide2{
+			  background-image: url('bkgrnd2.png');
+			  height: 500px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: cover;
+			}
+			.slide3{
+			  background-image: url('bkgrnd3.png');
+			  height: 500px;
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: cover;
+			}
+			
+
+			.carousel-captionl h1{
+			  font-size: 4em;
+			  font-family: 'Abril Fatface', serif;
+			  padding-bottom: .2em;
+			  text-shadow: 3px 3px 8px black;
+			  text-align: center;
+			  padding-top: 35px;
+			  color: white;
+			}
+			.carousel-captionl div.colorblue{
+				color: black;
+
+			  text-shadow: 0px 0px 5px white;
+							}
+							.carousel-captionl{
+								overflow-y: scroll;
+							}
+			.carousel-captionl div{
+				color: white;
+				background: none;
+     			font-size: 28px;
+			  text-shadow: 0px 0px 5px black;
+			  font-family: 'Patua One', cursive;}
+
+			@media screen and (max-width: 1199px) and (min-width: 992px){
+							.carousel-captionl div{
+								font-size: 23px;
+							}
+							
+			}
+@media screen and (max-width: 991px) and (min-width: 768px){
+							.carousel-captionl div{
+								font-size: 20px;
+							}
+							
+			}
+@media screen and (max-width: 767px){
+							.carousel-captionl div{
+								font-size: 18px;
+							}
+							
+			}
+
 			/*
 You can add your own CSS here.
+
+			
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -803,8 +901,6 @@ About The School</a></li><li class="undefined"><a href="http://www.stg6.edugoril
 <!-- PUBLIC FACILITIES -->
 
 
-
-
 <!-- 1st Display Basic Details-->
 <div class="listing-detail-section family" >
 <h2 class="page-header">Basic Details</h2>
@@ -861,20 +957,43 @@ About The School</a></li><li class="undefined"><a href="http://www.stg6.edugoril
 	</div>
  </div> 
  <!-- 2nd Display About the School -->
-<div class="listing-detail-section family">
-<h2 class="page-header">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<div class="listing-detail-section family" >
+<h2 class="page-header" >
 About The School</h2>
-<div class="container">
-  <ul class="nav nav-pills">
-    <li class="active"><a data-toggle="pill" href="http://www.stg6.edugorilla.com/schools/abc-school/#home"><h3>Basic Facilities</h3></a></li>
-    <li><a data-toggle="pill" href="http://www.stg6.edugorilla.com/schools/abc-school/#menu1"><h3>Infrastructure</h3></a></li>
-    <li><a data-toggle="pill" href="http://www.stg6.edugorilla.com/schools/abc-school/#menu2"><h3>Curriculum</h3></a></li>
-  </ul>
+
   
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-          <div class="w3-card-4 w3-light-gray tcenter col-lg-8 col-sm-6">
-            <div class="w3-container lcenter ">
+<div id="theCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+    <li data-target="#theCarousel" data-slide-to="0"> </li >
+    <li data-target="#theCarousel" data-slide-to="1" class="active"> </li>
+    <li data-target ="#theCarousel" data-slide-to="2"> </li>
+  </ol >
+
+ <div class="carousel-inner">
+    <div class="item">
+		<div class="slide1">
+		<div class="carousel-captionl">
+			<h1>Basic Facilities</h1>
+								<div class="w3-container lcenter ">
 			<h3>
 			<div class="row">
 
@@ -914,16 +1033,20 @@ About The School</h2>
 			</h3>
 			  
 			</div>
-          </div>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-          <div class="w3-card-4 w3-light-gray tcenter col-lg-8 col-sm-6">
-            <div class="w3-container lcenter ">
+		</div></div>
+		
+  </div>
+
+      <div class="item active">
+		<div class="slide2">
+		<div class="carousel-captionl">
+			<h1>Infrastructure</h1>
+							<div class="w3-container lcenter ">
 			<h3>
 			<div class="row">
               
-			  <div class="col-sm-6 col-lg-7  ">1. Status of Building :</div>
-			  <div class="col-sm-1 col-lg-3 colorblue"> Private</div>
+			  <div class="col-sm-5 col-lg-7  ">1. Status of Building :</div>
+			  <div class="col-sm-5 col-lg-3 colorblue"> Private</div>
 			</div>
 			<div class="row">
              
@@ -954,54 +1077,78 @@ About The School</h2>
 			</div>
 			</h3> 
 			</div>
-          </div>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-          <div class="w3-card-4 w3-light-gray tcenter col-lg-8 col-sm-6">
-            <div class="w3-container lcenter ">
-			<h3>
-			<div class="row">
-			  <div class="col-sm-6 col-lg-8  ">1. CCE System Implemented :</div>
-			  <div class="col-sm-1 col-lg-2 colorblue"> Yes</div>
-			</div>
-			<div class="row">
-			  <div class="col-sm-6 col-lg-8  ">2. Student Records Maintained:</div>
-			  <div class="col-sm-1 col-lg-2 colorblue">No</div>
-			</div>
-			<div class="row">
-			<h4>
-			  <div class="col-sm-6 col-lg-8  ">Records Shared with parents:</div>
-			  <div class="col-sm-1 col-lg-2 colorblue">Yes</div>
-			</h4>
-			</div>
-			<div class="row">
-			  <div class="col-sm-6 col-lg-8  ">3. Libarary Available :</div>
-			  <div class="col-sm-1 col-lg-2 colorblue">Yes</div>
-			</div>
-			<div class="row">
-			<h4>
-              <div class="col-sm-2 col-lg-3"> No.of Books: </div>
-			  <div class="col-sm-1 col-lg-1 colorblue ">1000</div>
-			  <div class="col-sm-1 col-lg-1"></div>
-			  <div class="col-sm-2 col-lg-3">Record of books: </div>
-			  <div class="col-sm-2 col-lg-1 colorblue">Yes</div>
-			 </h4>
-			</div>
-			<div class="row">
-			  <div class="col-sm-6 col-lg-8  ">4. Computer Lab Available:</div>
-			  <div class="col-sm-1 col-lg-2 colorblue">Yes</div>
-			</div>
-			<div class="row">
-			  <div class="col-sm-6 col-lg-8  ">5. No. of computers:</div>
-			  <div class="col-sm-1 col-lg-2 colorblue">10</div>
-			</div>
-			 </h3> 
-			</div>
-          </div>
-    </div>
+		</div></div>
   </div>
+      <div class="item">
+		<div class="slide3">
+		<div class="carousel-captionl">
+			<h1>Curriculum</h1>
+							<div class="w3-container lcenter curri">
+							<h3>
+							<div class="row">
+							  <div class="col-sm-6 col-lg-8  ">1. CCE System Implemented :</div>
+							  <div class="col-sm-1 col-lg-2 colorblue"> Yes</div>
+							</div>
+							<div class="row">
+							  <div class="col-sm-6 col-lg-8  ">2. Student Records Maintained:</div>
+							  <div class="col-sm-1 col-lg-2 colorblue">No</div>
+							</div>
+							<div class="row">
+							<h4>
+							  <div class="col-sm-6 col-lg-8  ">Records Shared with parents:</div>
+							  <div class="col-sm-1 col-lg-2 colorblue">Yes</div>
+							</h4>
+							</div>
+							<div class="row">
+							  <div class="col-sm-6 col-lg-8  ">3. Libarary Available :</div>
+							  <div class="col-sm-1 col-lg-2 colorblue">Yes</div>
+							</div>
+							<div class="row">
+							<h4>
+				              <div class="col-sm-2 col-lg-3"> No.of Books: </div>
+							  <div class="col-sm-1 col-lg-1 colorblue ">1000</div>
+							  <div class="col-sm-1 col-lg-1"></div>
+							  <div class="col-sm-2 col-lg-3">Record of books: </div>
+							  <div class="col-sm-2 col-lg-1 colorblue">Yes</div>
+							 </h4>
+							</div>
+							<div class="row">
+							  <div class="col-sm-6 col-lg-8  ">4. Computer Lab Available:</div>
+							  <div class="col-sm-1 col-lg-2 colorblue">Yes</div>
+							</div>
+							<div class="row">
+							  <div class="col-sm-6 col-lg-8  ">5. No. of computers:</div>
+							  <div class="col-sm-1 col-lg-2 colorblue">10</div>
+							</div>
+							 </h3> 
+							</div>
+		</div></div>
+  </div>
+
+</div>
+<a class="left carousel-control" href="#theCarousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left"> </span>
+  </a>
+  <a class="right carousel-control" href="#theCarousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
 </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- 3rd Display -- Other Features -->
 <div class="listing-detail-section family">
 <h2 class="page-header">Other Features</h2>
@@ -3032,4 +3179,6 @@ var _wpMediaViewsL10n = {"url":"URL","addMedia":"Add Media","search":"Search","s
 <!-- Dynamic page generated in 1.436 seconds. -->
 <!-- Cached page generated by WP-Super-Cache on 2017-04-30 17:54:21 -->
 
-<!-- Compression = gzip --><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>
+<!-- Compression = gzip --><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div>
+
+</body></html>
