@@ -8,7 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster+Two|Patua+One|Acme|Patua+One" rel="stylesheet">
 
 <style type="text/css">
 
@@ -128,15 +128,27 @@ var userSettings = {"url":"\/","uid":"0","time":"1493574860","secure":""};
 			}
 			#basic_details div div{
 				-ms-transition: 0.25s;
+				-o-transition: 0.25s;
+				-moz-transition: 0.25s;
 				-webkit-transition: 0.25s;
 					transition: 0.25s;
 			}
 			@media screen and (min-width: 768px){
 
 			#basic_details div:hover i{
+				-webkit-transform: scale(2,2);
+				-o-transform: scale(2,2); 
+				-moz-transform: scale(2,2); 
+				-ms-transform: scale(2,2);
+
 					transform: scale(2,2);
 			}
 			#basic_details div:hover div{
+					-webkit-transform: matrix(1.2,0,0,1.2,0,20);
+				-o-transform: matrix(1.2,0,0,1.2,0,20);
+				-moz-transform: matrix(1.2,0,0,1.2,0,20);
+				-ms-transform: matrix(1.2,0,0,1.2,0,20);
+
 					transform: matrix(1.2,0,0,1.2,0,20);
 			}
 			
@@ -214,7 +226,86 @@ var userSettings = {"url":"\/","uid":"0","time":"1493574860","secure":""};
 							}
 							
 			}
+			
+			
 
+#cardcontainer{
+	height: 280px;
+	margin-bottom: 20px;
+	border-style: inset;
+	border-width: 2px;
+	border-color: darkgrey;
+}
+
+.backfc{
+	position: absolute;
+	height: 100%;
+	width: 100% ;
+
+	left: 0px; 
+	-webkit-perspective: 600px;
+	perspective: 600px;
+	transform: rotateY(180deg);
+	transition: 0.5s ease-out;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.backfc h2{
+	color: white;
+	font-family: 'Acme', sans-serif;
+
+}
+ .backfc p{
+ 	color: white;
+ 	text-shadow: 0px 0px 2px black;
+font-family: 'Patua One', cursive;
+ }
+.blackfcpink{
+
+	background: linear-gradient(0deg, rgb(221,244,232), rgb(158,62,130), rgb(68,0,87));
+}
+.blackfcyellow{
+
+	background: linear-gradient(0deg, rgb(216,96,27),yellow);
+}
+.blackfcblue{
+	background: linear-gradient(0deg, rgb(123,235,255),rgb(16,15,37));
+}
+.blackfcred{
+	background: linear-gradient(rgb(255,102,0),rgb(255,0,68));
+}
+.frontfc h1{
+	color: rgb(300,300,300);
+	size: 130%;
+	line-height: 50px;
+	font-family: 'Lobster Two', cursive;
+	text-shadow: 0px 2px 2px black;
+	
+}
+.frontfc{
+	position: absolute;
+	height: 100%;
+	width: 100% ;
+	left: 0px;
+
+	-webkit-perspective: 600px;
+	perspective: 600px; 
+	background: linear-gradient(rgb(255,221,253), rgb(255,227,277), rgb(208,250,243));
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: 0.5s ease-out;
+	
+}	
+#cardcontainer:hover .frontfc{
+transform: rotateY(180deg);
+	-webkit-perspective: 600px;
+	perspective: 600px;
+}
+#cardcontainer:hover .backfc{
+	transform: rotateY(0deg);
+		-webkit-perspective: 600px;
+	perspective: 600px;
+}			
 			/*
 You can add your own CSS here.
 
@@ -1153,115 +1244,122 @@ About The School</h2>
 <div class="listing-detail-section family">
 <h2 class="page-header">Other Features</h2>
 <div class="row">
-<div class="col-sm-1 col-lg-1"></div>
-<div class="cardcontain col-sm-3 col-lg-4">
-<div class="card">
-    <div class="front">
-     <br><h1><i class="fa fa-money colorpurple tcenter"></i></h1>
-	 <h2>Fundings <br>And<br> Grants</h2>
-    </div>
-   <div class="back">
-     <h2 class="tcenter "> Funds &amp; Grants </h2>
-     <br>     
-	 <div class="row">
-      <div class="col-sm-4 col-lg-6 size1">Total Grant Receipt:</div>
-	  <div class="col-sm-4 col-lg-6 size2">700000</div>
-	  </div><br>
-	  <div class="row">
-	  <div class="col-sm-4 col-lg-6 size1">Total Grant Expenditure:</div>
-	  <div class="col-sm-4 col-lg-6 size2">428000</div>
-      </div> 
-   </div>
-</div></div>
-<div class="col-sm-2 col-lg-2"></div>
-<div class="cardcontain  col-sm-3 col-lg-4">
-<div class="card">
-    <div class="front">
-     <br><h1><i class="fa fa-institution coloryellow size2 tcenter"></i></h1>
-	 <h2>Inspections<br> In The<br> School</h2>
-    </div>
-   <div class="back">
-	  <h2 class="tcenter">Inspections</h2>
-	  <br>
-      <div class="row">
-      <div class="col-sm-4 col-lg-6 size1">Inspection By Officers :</div>
-	  <div class="col-sm-4 col-lg-6 size2">8</div>
-	  </div><br>
-	  <div class="row">
-	  <div class="col-sm-4 col-lg-6 size1">Inspections By Others:</div>
-	  <div class="col-sm-4 col-lg-6 size2">4</div>
-      </div> 
-   </div>
+<div id="cardcontainer" class="col-sm-5 col-lg-4 col-lg-offset-1 col-md-5" >
+
+
+
+<div class="flip3d">
+		<div class="backfc blackfcpink">
+			<h2>Funds and Grants</h2><br>
+			<p style="margin-left: 10px;">Total Grant Received: 700000</p>
+			<p style="margin-left: 10px;">Total Grant EXpenditure: 428000</p>
+		</div>
+		<div class="frontfc">
+		<h1 class="tcenter"><i class="fa fa-money size2 colorpurple"></i></h1>
+			<h1 class="text-center">Fundings<br>And<br>Grants</h1>
+		</div>
+
+</div>
+
+
+</div>
+
+<div id="cardcontainer" class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-2" >
+
+<div class="flip3d">
+		<div class="backfc blackfcyellow">
+			<h2>Inspections</h2><br>
+			<p style="margin-left: 10px;">Inspections by Officers: 8</p>
+			<p style="margin-left: 10px;">Inspections by Others: 4</p>
+		</div>
+		<div class="frontfc">
+		<h1 class="tcenter"><i class="fa fa-institution size2 coloryellow"></i></h1>
+			<h1 class="text-center">Inspections<br>In The<br>School</h1>
+		</div>
+
+</div>
+
+
+
+
+
 </div>
 </div>
-</div>
-<br>
 <div class="row">
-<div class="col-sm-1 col-lg-1"></div>
-<div class="cardcontain col-sm-3 col-lg-4">
-<div class="card">
-    <div class="front">
-      <br><h1><i class="fa fa-group colorblue tcenter"></i></h1>
-	  <h2>School Management Council</h2>
-    </div>
-   <div class="back">
-     <h3>School Management Councils</h3>
-      <div class="row">
-      <div class="col-sm-6 col-lg-8 size1">1.SMCs in School Development:</div>
-	  <div class="col-sm-2 col-lg-2 size1">Yes</div>
-	  </div>
-	  <div class="row">
-      <div class="col-sm-6 col-lg-8 size1">2.Total Members:</div>
-	  <div class="col-sm-2 col-lg-2 size1">22</div>
-	  </div>
-	  <div class="row">
-      <div class="col-sm-6 col-lg-8 size1">3.Parents Members:</div>
-	  <div class="col-sm-2 col-lg-2 size1">11</div>
-	  </div>
-	  <div class="row">
-	  <div class="col-sm-6 col-lg-8 size1">4.Local Authorities:</div>
-	  <div class="col-sm-2 col-lg-2 size1">11</div>
-      </div>
-	  <div class="row">
-	  <div class="col-sm-6 col-lg-8 size1">5.SMCs Meetings in a year:</div>
-	  <div class="col-sm-2 col-lg-2 size1">12</div>
-      </div> 	  
-   </div>
-</div></div>
-<div class="col-sm-2 col-lg-2"></div>
-<div class="cardcontain  col-sm-3 col-lg-4">
-<div class="card">
-    <div class="front">
-     <br><h1><i class="fa fa-graduation-cap colorred tcenter"></i></h1>
-	 <h2>Special <br>Trainings</h2>
-    </div>
-   <div class="back">
-   <h3> Special Trainings</h3>
-     <div class="row">
-      <div class="col-sm-5 col-lg-7 size1">1.Enrolled Children:</div>
-	  <div class="col-sm-3 col-lg-3 size1">78</div>
-	  </div>
-	  <div class="row">
-      <div class="col-sm-5 col-lg-7 size1">2.Children provided the training:</div>
-	  <div class="col-sm-3 col-lg-3 size1 padng">70</div>
-	  </div>
-	  <div class="row">
-      <div class="col-sm-5 col-lg-7 size1">3.Type Of Training:</div>
-	  <div class="col-sm-3 col-lg-3 size1 padng">All types</div>
-	  </div>
-	  <div class="row">
-	  <div class="col-sm-5 col-lg-7 size1">4.Teachers alloted:</div>
-	  <div class="col-sm-3 col-lg-3 size1 padng"></div>
-      </div> 
-	  <div class="row">
-	  <div class="col-sm-5 col-lg-7 size1">5.Place of Training:</div>
-	  <div class="col-sm-3 col-lg-3 size1 padng">School Premises</div>
-      </div>
-   </div>
+<div id="cardcontainer" class="col-sm-5 col-lg-4 col-lg-offset-1 col-md-5" >
+
+
+
+<div class="flip3d">
+		<div class="backfc blackfcblue">
+			<h2>School Management Council</h2>
+			<p >
+				1.SMCs in School Development: Yes<br>
+				2.Total Members: 22<br>
+				3.Parents Members: 11<br>
+				4.Local Authorities: 11<br>
+				5.SMCs Meeting in a Year: 12<br>
+			</p>
+			
+			
+		</div>
+		<div class="frontfc">
+		<h1 class="tcenter"><i class="fa fa-group colorblue" "></i></h1>
+			<h1 class="text-center">Management<br>Council</h1>
+		</div>
+
+</div>
+
+
+</div>
+<div id="cardcontainer" class="col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-2" >
+
+
+
+<div class="flip3d">
+		<div class="backfc blackfcred">
+			<h2>Special Trainings</h2>
+			<p style="margin-left: 10px;">1. Enrolled Children: 78<br>
+			2.Children Provided the Training: 70<br>
+			3.Types of Training: All Types<br>
+			4.Teachers Alloted<br>
+			5.Place of Training: School Premises
+			</p>
+			
+		</div>
+		<div class="frontfc">
+		<h1 class="tcenter"><i class="fa fa-graduation-cap size2 colorred"></i></h1>
+			<h1 class="text-center">Special<br>Trainings</h1>
+		</div>
+
+</div>
+
+
 </div>
 </div>
 </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- 4th Display -- Teaches & Students --> 
 	<!-- /.listing-detail-section -->
